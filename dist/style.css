@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Carter+One&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: #667db6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#app-wrapper {
+  padding: 240px;
+}
+@media only screen and (max-width: 768px) {
+  #app-wrapper {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 375px) {
+  #app-wrapper {
+    padding: 12px;
+    padding-block-start: 32px;
+  }
+}
+#app-wrapper #wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#app-wrapper #wrapper #heading {
+  text-align: center;
+  color: #1A1B1F;
+  margin-block-end: 36px;
+  font-family: 'Raleway', cursive;
+  font-size: 60px;
+}
+@media only screen and (max-width: 768px) {
+  #app-wrapper #wrapper #heading {
+    font-size: 28px;
+    margin-block-end: 24px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  #app-wrapper #wrapper #heading {
+    font-size: 24px;
+  }
+}
+#app-wrapper #wrapper #pomodoro {
+  background-color: #1A1B1F;
+  width: 100%;
+  max-width: 700px;
+  min-height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 48px;
+  border-radius: 24px;
+  box-shadow: 0px 40px 51px -33px rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 375px) {
+  #app-wrapper #wrapper #pomodoro {
+    padding: 24px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #app-wrapper #wrapper #pomodoro {
+    max-width: 400px;
+  }
+}
+#app-wrapper #wrapper #pomodoro #beep {
+  display: none;
+}
+#app-wrapper #wrapper #pomodoro #timer,
+#app-wrapper #wrapper #pomodoro .length-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#app-wrapper #wrapper #pomodoro #timer {
+  background-color: #1A1B1F;
+  border: 8px solid #00FFFF;
+  color: #00FFFF;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  transiton: all 200ms ease-in-out;
+  margin: 0 32px;
+  padding: 8px;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (max-width: 375px) {
+  #app-wrapper #wrapper #pomodoro #timer {
+    width: 100%;
+    border-radius: 24px;
+    border-width: 6px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #app-wrapper #wrapper #pomodoro #timer {
+    margin: 32px 0;
+  }
+}
+#app-wrapper #wrapper #pomodoro #timer #timer-label {
+  margin-block-end: 8px;
+  color: #fff;
+  font-size: 20px;
+}
+#app-wrapper #wrapper #pomodoro #timer #time-left {
+  font-size: 48px;
+}
+@media only screen and (max-width: 300px) {
+  #app-wrapper #wrapper #pomodoro #timer #time-left {
+    font-size: 36px;
+  }
+}
+#app-wrapper #wrapper #pomodoro #timer #timer-options {
+  position: absolute;
+  height: 48px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+#app-wrapper #wrapper #pomodoro #timer #timer-options button {
+  flex: 1;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #00ffff;
+  border-bottom: none;
+  background: #1A1B1F;
+  color: #00ffff;
+  transition: background 200ms ease-in;
+}
+#app-wrapper #wrapper #pomodoro #timer #timer-options button:hover {
+  background-color: #333642;
+}
+#app-wrapper #wrapper #pomodoro #timer #timer-options button:active {
+  background-color: #333642;
+  transform: scale(0.99);
+}
+@media only screen and (min-width: 301px) {
+  #app-wrapper #wrapper #pomodoro #timer #timer-options button#reset i {
+    position: absolute;
+    bottom: 45%;
+    left: 0;
+    right: 35%;
+  }
+  #app-wrapper #wrapper #pomodoro #timer #timer-options button#start_stop i {
+    position: absolute;
+    bottom: 45%;
+    left: 35%;
+    right: 0;
+  }
+}
+#app-wrapper #wrapper #pomodoro .length-control {
+  text-align: center;
+}
+#app-wrapper #wrapper #pomodoro .length-control h3 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media only screen and (max-width: 768px) {
+  #app-wrapper #wrapper #pomodoro .length-control {
+    width: 100%;
+  }
+}
+#app-wrapper #wrapper #pomodoro .length-control .length-control-body {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-block-start: 8px;
+  color: #00ffff;
+}
+#app-wrapper #wrapper #pomodoro .length-control .length-control-body button {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background-color: #333642;
+  color: #00ffff;
+  cursor: pointer;
+}
+#app-wrapper #wrapper #pomodoro .length-control .length-control-body button:hover {
+  color: #00CEE4;
+}
+#app-wrapper #wrapper #pomodoro .length-control .length-control-body .length {
+  margin: 0 8px;
+}
+#app-wrapper .main-footer {
+  text-align: center;
+  color: #1A1B1F;
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 10px;
+  font-family: 'Rubik', sans-serif;
+  margin-top: 50px;
+}
+#app-wrapper .main-footer a {
+  text-decoration: none;
+  color: #1A1B1F;
+}
+#app-wrapper .main-footer a:hover {
+  color: #333642;
+}
